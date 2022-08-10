@@ -38,8 +38,8 @@ class RequestData implements ModelInterface, ArrayAccess
     }
     
     protected static $attributeMap = [
-        'folio_otorgante' => 'FolioOtorgante',
-        'folio_consulta' => 'FolioConsulta',
+        'folio_otorgante' => 'folioOtorgante',
+        'folio_consulta' => 'folioConsulta',
         'ip' => 'ip',
         'email' => 'email',
         'phone' => 'phone'

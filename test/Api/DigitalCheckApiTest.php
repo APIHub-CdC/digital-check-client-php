@@ -7,8 +7,8 @@ use CirculoDeCredito\DigitalCheck\Client\Configuration;
 use CirculoDeCredito\DigitalCheck\Client\ApiException;
 use CirculoDeCredito\DigitalCheck\Client\ObjectSerializer;
 use CirculoDeCredito\DigitalCheck\Client\Model\RequestData;
-use CirculoDeCredito\DigitalCheck\Client\Interceptor\KeyHandler;
-use CirculoDeCredito\DigitalCheck\Client\Interceptor\MiddlewareEvents;
+use Signer\Manager\Interceptor\MiddlewareEvents;
+use Signer\Manager\Interceptor\KeyHandler;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\HandlerStack;
 
