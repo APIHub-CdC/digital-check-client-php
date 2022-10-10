@@ -13,7 +13,7 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
     
     protected static $RCCPMTypes = [
         'email' => 'string',
-        'score' => 'string',
+        'grade' => 'string',
         'deliverable' => 'bool',
         'domain_details' => 'CirculoDeCredito\DigitalCheck\Client\Model\ResponseDomainDetails',
         'account_details' => 'CirculoDeCredito\DigitalCheck\Client\Model\ResponseAccountDetails',
@@ -22,7 +22,7 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
     
     protected static $RCCPMFormats = [
         'email' => null,
-        'score' => null,
+        'grade' => null,
         'deliverable' => null,
         'domain_details' => null,
         'account_details' => null,
@@ -41,7 +41,7 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
     
     protected static $attributeMap = [
         'email' => 'email',
-        'score' => 'score',
+        'grade' => 'grade',
         'deliverable' => 'deliverable',
         'domain_details' => 'domain_details',
         'account_details' => 'account_details',
@@ -50,7 +50,7 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
     
     protected static $setters = [
         'email' => 'setEmail',
-        'score' => 'setScore',
+        'grade' => 'setGrade',
         'deliverable' => 'setDeliverable',
         'domain_details' => 'setDomainDetails',
         'account_details' => 'setAccountDetails',
@@ -59,7 +59,7 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
     
     protected static $getters = [
         'email' => 'getEmail',
-        'score' => 'getScore',
+        'grade' => 'getGrade',
         'deliverable' => 'getDeliverable',
         'domain_details' => 'getDomainDetails',
         'account_details' => 'getAccountDetails',
@@ -93,7 +93,7 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['grade'] = isset($data['grade']) ? $data['grade'] : null;
         $this->container['deliverable'] = isset($data['deliverable']) ? $data['deliverable'] : null;
         $this->container['domain_details'] = isset($data['domain_details']) ? $data['domain_details'] : null;
         $this->container['account_details'] = isset($data['account_details']) ? $data['account_details'] : null;
@@ -122,14 +122,14 @@ class ResponseEmailDetails implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getScore()
+    public function getGrade()
     {
-        return $this->container['score'];
+        return $this->container['grade'];
     }
     
-    public function setScore($score)
+    public function setGrade($grade)
     {
-        $this->container['score'] = $score;
+        $this->container['grade'] = $grade;
         return $this;
     }
     

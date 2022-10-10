@@ -15,14 +15,14 @@ class ResponseAppliedRules implements ModelInterface, ArrayAccess
         'id' => 'string',
         'name' => 'string',
         'operation' => 'string',
-        'score' => 'float'
+        'grade' => 'float'
     ];
     
     protected static $RCCPMFormats = [
         'id' => null,
         'name' => null,
         'operation' => null,
-        'score' => null
+        'grade' => null
     ];
     
     public static function RCCPMTypes()
@@ -39,21 +39,21 @@ class ResponseAppliedRules implements ModelInterface, ArrayAccess
         'id' => 'id',
         'name' => 'name',
         'operation' => 'operation',
-        'score' => 'score'
+        'grade' => 'grade'
     ];
     
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
         'operation' => 'setOperation',
-        'score' => 'setScore'
+        'grade' => 'setGrade'
     ];
     
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
         'operation' => 'getOperation',
-        'score' => 'getScore'
+        'grade' => 'getGrade'
     ];
     
     public static function attributeMap()
@@ -108,7 +108,7 @@ class ResponseAppliedRules implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['grade'] = isset($data['grade']) ? $data['grade'] : null;
     }
     
     public function listInvalidProperties()
@@ -171,14 +171,14 @@ class ResponseAppliedRules implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getScore()
+    public function getGrade()
     {
-        return $this->container['score'];
+        return $this->container['grade'];
     }
     
-    public function setScore($score)
+    public function setGrade($grade)
     {
-        $this->container['score'] = $score;
+        $this->container['grade'] = $grade;
         return $this;
     }
     

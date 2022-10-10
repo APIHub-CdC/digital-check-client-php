@@ -14,7 +14,7 @@ class ResponseData implements ModelInterface, ArrayAccess
     protected static $RCCPMTypes = [
         'id' => 'string',
         'state' => 'string',
-        'fraud_score' => 'float',
+        'fraud_grade' => 'float',
         'version' => 'string',
         'applied_rules' => 'CirculoDeCredito\DigitalCheck\Client\Model\ResponseAppliedRules[]',
         'ip_details' => 'CirculoDeCredito\DigitalCheck\Client\Model\ResponseIpDetails',
@@ -25,7 +25,7 @@ class ResponseData implements ModelInterface, ArrayAccess
     protected static $RCCPMFormats = [
         'id' => null,
         'state' => null,
-        'fraud_score' => null,
+        'fraud_grade' => null,
         'version' => null,
         'applied_rules' => null,
         'ip_details' => null,
@@ -46,7 +46,7 @@ class ResponseData implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'state' => 'state',
-        'fraud_score' => 'fraud_score',
+        'fraud_grade' => 'fraud_grade',
         'version' => 'version',
         'applied_rules' => 'applied_rules',
         'ip_details' => 'ip_details',
@@ -57,7 +57,7 @@ class ResponseData implements ModelInterface, ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'state' => 'setState',
-        'fraud_score' => 'setFraudScore',
+        'fraud_grade' => 'setFraudGrade',
         'version' => 'setVersion',
         'applied_rules' => 'setAppliedRules',
         'ip_details' => 'setIpDetails',
@@ -68,7 +68,7 @@ class ResponseData implements ModelInterface, ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'state' => 'getState',
-        'fraud_score' => 'getFraudScore',
+        'fraud_grade' => 'getFraudGrade',
         'version' => 'getVersion',
         'applied_rules' => 'getAppliedRules',
         'ip_details' => 'getIpDetails',
@@ -117,7 +117,7 @@ class ResponseData implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['fraud_score'] = isset($data['fraud_score']) ? $data['fraud_score'] : null;
+        $this->container['fraud_grade'] = isset($data['fraud_grade']) ? $data['fraud_grade'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['applied_rules'] = isset($data['applied_rules']) ? $data['applied_rules'] : null;
         $this->container['ip_details'] = isset($data['ip_details']) ? $data['ip_details'] : null;
@@ -174,14 +174,14 @@ class ResponseData implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getFraudScore()
+    public function getFraudGrade()
     {
-        return $this->container['fraud_score'];
+        return $this->container['fraud_grade'];
     }
     
-    public function setFraudScore($fraud_score)
+    public function setFraudGrade($fraud_grade)
     {
-        $this->container['fraud_score'] = $fraud_score;
+        $this->container['fraud_grade'] = $fraud_grade;
         return $this;
     }
     
