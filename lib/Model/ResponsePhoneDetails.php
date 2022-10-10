@@ -17,7 +17,7 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         'type' => 'string',
         'country' => 'string',
         'carrier' => 'string',
-        'score' => 'float',
+        'grade' => 'float',
         'account_details' => 'CirculoDeCredito\DigitalCheck\Client\Model\ResponsePhAccountDetails'
     ];
     
@@ -27,7 +27,7 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         'type' => null,
         'country' => null,
         'carrier' => null,
-        'score' => null,
+        'grade' => null,
         'account_details' => null
     ];
     
@@ -47,7 +47,7 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         'type' => 'type',
         'country' => 'country',
         'carrier' => 'carrier',
-        'score' => 'score',
+        'grade' => 'grade',
         'account_details' => 'account_details'
     ];
     
@@ -57,7 +57,7 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         'type' => 'setType',
         'country' => 'setCountry',
         'carrier' => 'setCarrier',
-        'score' => 'setScore',
+        'grade' => 'setGrade',
         'account_details' => 'setAccountDetails'
     ];
     
@@ -67,7 +67,7 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         'type' => 'getType',
         'country' => 'getCountry',
         'carrier' => 'getCarrier',
-        'score' => 'getScore',
+        'grade' => 'getGrade',
         'account_details' => 'getAccountDetails'
     ];
     
@@ -131,7 +131,7 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['carrier'] = isset($data['carrier']) ? $data['carrier'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['grade'] = isset($data['grade']) ? $data['grade'] : null;
         $this->container['account_details'] = isset($data['account_details']) ? $data['account_details'] : null;
     }
     
@@ -217,14 +217,14 @@ class ResponsePhoneDetails implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getScore()
+    public function getGrade()
     {
-        return $this->container['score'];
+        return $this->container['grade'];
     }
     
-    public function setScore($score)
+    public function setGrade($grade)
     {
-        $this->container['score'] = $score;
+        $this->container['grade'] = $grade;
         return $this;
     }
     

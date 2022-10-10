@@ -13,7 +13,7 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
     
     protected static $RCCPMTypes = [
         'ip' => 'string',
-        'score' => 'float',
+        'grade' => 'float',
         'country' => 'string',
         'state_prov' => 'string',
         'city' => 'string',
@@ -34,7 +34,7 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
     
     protected static $RCCPMFormats = [
         'ip' => null,
-        'score' => null,
+        'grade' => null,
         'country' => null,
         'state_prov' => null,
         'city' => null,
@@ -65,7 +65,7 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
     
     protected static $attributeMap = [
         'ip' => 'ip',
-        'score' => 'score',
+        'grade' => 'grade',
         'country' => 'country',
         'state_prov' => 'state_prov',
         'city' => 'city',
@@ -86,7 +86,7 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
     
     protected static $setters = [
         'ip' => 'setIp',
-        'score' => 'setScore',
+        'grade' => 'setGrade',
         'country' => 'setCountry',
         'state_prov' => 'setStateProv',
         'city' => 'setCity',
@@ -107,7 +107,7 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
     
     protected static $getters = [
         'ip' => 'getIp',
-        'score' => 'getScore',
+        'grade' => 'getGrade',
         'country' => 'getCountry',
         'state_prov' => 'getStateProv',
         'city' => 'getCity',
@@ -184,7 +184,7 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['grade'] = isset($data['grade']) ? $data['grade'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['state_prov'] = isset($data['state_prov']) ? $data['state_prov'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
@@ -232,14 +232,14 @@ class ResponseIpDetails implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getScore()
+    public function getGrade()
     {
-        return $this->container['score'];
+        return $this->container['grade'];
     }
     
-    public function setScore($score)
+    public function setGrade($grade)
     {
-        $this->container['score'] = $score;
+        $this->container['grade'] = $grade;
         return $this;
     }
     
